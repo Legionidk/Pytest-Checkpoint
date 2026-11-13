@@ -1,7 +1,10 @@
 import pytest
+import allure
 from schedule import is_correct_types
 
 
+@allure.feature("Проверка типов")
+@allure.story("Проверка типов ивента для указанного дня")
 @pytest.mark.parametrize(
     "day, result",
     [

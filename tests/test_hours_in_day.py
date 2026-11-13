@@ -1,7 +1,10 @@
 import pytest
+import allure
 from schedule import hours_in_day
 
 
+@allure.feature("Учебные часы")
+@allure.story("Получение суммы лекционных часов")
 @pytest.mark.parametrize(
     "day, expected",
     [

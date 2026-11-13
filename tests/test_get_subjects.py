@@ -1,7 +1,10 @@
 import pytest
+import allure
 from schedule import get_subjects
 
 
+@allure.feature("Расписание")
+@allure.story("Получение списка предметов по дням")
 @pytest.mark.parametrize(
     "day, result",
     [

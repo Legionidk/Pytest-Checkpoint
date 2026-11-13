@@ -3,10 +3,9 @@
 ```
 python -m venv .venv
 pip install -r requirements.txt
-python -m pytest tests
 ```
 
-Для запуска использовать **ТОЛЬКО** `python -m pytest tests`, иначе сломаются импорты.
+Для запуска использовать **ТОЛЬКО** `python -m pytest tests` или `pytest --cov=schedule --cov-report=term-missing --cov-report=html --alluredir=allure-results`, иначе сломаются импорты.
 
 # Ожидаемые результаты
 
@@ -23,3 +22,9 @@ python -m pytest tests
 `test_is_correct_types.py`
 
 Скипнуты _суббота_ и _пятница_, потому что они отсутствуют в спецификации _(задании с LXP)_.
+
+## Покрытие - 92%
+
+`schedule.py`
+
+`104` и `108` строчка - два `return`, которые отъедают 8% покрытия.
